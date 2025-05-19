@@ -42,10 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  function isValidEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
+ 
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -59,12 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    if (!isValidEmail(email)) {
-      emailError.textContent = "Please enter a valid email address.";
-      return;
-    } else {
-      emailError.textContent = "";
-    }
+   
 
     ticketName.textContent = fullName;
     ticketEmail.textContent = email;
