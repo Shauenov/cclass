@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Conf 2025 Ticket Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="form-section">
+        <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" class="logo" />
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year’s biggest coding conference.</p>
+
+        <form id="ticket-form">
+          <label for="avatar-upload">Upload Avatar</label>
+          <div class="upload-box" id="upload-box">
+            <input type="file" id="avatar-upload" accept="image/png, image/jpeg" hidden />
+            <img src="assets/images/icon-upload.svg" alt="Upload Icon" />
+            <p>Drag and drop or click to upload</p>
+            <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
+          </div>
+          <p class="error-message" id="avatar-error"></p>
+
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" placeholder="Your Name" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="example@email.com" required />
+          <p class="error-message" id="email-error"></p>
+
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" placeholder="@yourusername" required />
+
+          <button type="submit">Generate My Ticket</button>
+        </form>
+      </section>
+
+      <section class="ticket-section hidden" id="ticket-section">
+        <h2>Congrats, <span id="ticket-name"></span>!<br>Your ticket is ready.</h2>
+        <p>We’ve emailed your ticket to <span id="ticket-email"></span> and will send updates in the run up to the event.</p>
+
+        <div class="ticket">
+          <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" class="ticket-logo" />
+          <p class="ticket-date">Jan 31, 2025 / Austin, TX</p>
+          <div class="ticket-user">
+            <img src="" alt="User Avatar" id="ticket-avatar" />
+            <div>
+              <h3 id="ticket-fullname"></h3>
+              <p id="ticket-github"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
